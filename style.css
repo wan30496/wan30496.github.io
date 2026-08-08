@@ -1,0 +1,83 @@
+*{
+     box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #e5e7eb;
+    background: #0b1020;
+    font-family:
+	Arial,
+	"Microsoft Yahei",
+	sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    margin: 8px 0;
+    font-size: 48px;
+}
+
+.label {
+    color: #7db2ff;
+}
+
+main {
+    width: min(1000px, 86%);
+    margin: auto;
+}
+
+section {
+    padding: 50px 0;
+}
+
+.test-grid{
+    display: grid;
+    grid-template-columns:
+	repeat(auto-fit,minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.test-card:hover{
+    transform: translateY(-5px);
+    border-color: #7db2ff;
+}
+
+button {
+    padding: 12px 20px;
+    color: #08101f;
+    background: #7db2ff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #a5c9ff;
+}
+
+#test-canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #151d31;
+    border: 1px solid #304163;
+    border-radius: 12px;
+}
+
+footer {
+    padding: 24px;
+    color: #9ca3af;
+    text-align: canter;
+    border-top: 1px solid #304163;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+	font-size: 36px;
+    }
+    
+    header {
+	padding: 60px 7%;
+    }
+}
