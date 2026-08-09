@@ -6,6 +6,8 @@ document.addEventListener(
 const testButton =
     document.querySelector("#test-button");
 
+const resetButton =
+    document.querySelector("#reset-button");
 					        const testResult =
     document.querySelector("#test-result");
 
@@ -15,19 +17,25 @@ const canvas =
 if (!testButton) {
     console.error("没有找到id为test-button的元素"
     );
-return;
+    return;
+}
+
+if (!resetButton) {
+    console.error("没有找到id为reset-button的元素"
+    );
+    return;
 }
 
 if (!testResult) {
     console.error("没有找到id为test-result的元素"
 );
-return;
+    return;
 }
 
 if (!canvas) {
     console.error("没有找到id为test-canvas的元素"
 );
-return;
+    return;
 }
 
 let clickCount = 0;
@@ -38,6 +46,15 @@ testButton.addEventListener(
 	clickCount += 1;
 	testResult.textContent =
 	    `Success: clicked ${clickCount} times`;
+    }
+);
+
+resetButton.addEventListener(
+    "click",
+    function (){
+	clickCount = 0;
+	testResult.textContent = 
+	    "??????";
     }
 );
 

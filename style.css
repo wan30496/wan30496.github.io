@@ -106,6 +106,22 @@ button:hover{
     background: #a5c9ff;
 }
 
+.button-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.secondary-button {
+    color: #e5e7eb;
+    background: #334155;
+}
+
+.secondary-button:hover {
+    background: #475569;
+}
+
 #test-canvas {
     display: block;
     width: 100%;
