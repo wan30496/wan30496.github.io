@@ -37,6 +37,13 @@ section {
 	repeat(auto-fit,minmax(220px, 1fr));
     gap: 20px;
 }
+.test-card {
+    padding: 24px;
+    background: #151d31;
+    border: 1px solid #304163;
+    border-radius: 12px;
+    transition: transform 0.2s, border-color 0.2s;
+}
 
 .test-card:hover{
     transform: translateY(-5px);
@@ -68,7 +75,7 @@ button:hover{
 footer {
     padding: 24px;
     color: #9ca3af;
-    text-align: canter;
+    text-align: center;
     border-top: 1px solid #304163;
 }
 
