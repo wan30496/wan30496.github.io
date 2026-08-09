@@ -2,6 +2,32 @@
      box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.site-nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 1px 7%;
+    background: rgba(11, 16, 32, 0.92);
+    border-bottom: 1px solid #304163;
+}
+
+.site-nav a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.site-nav a:hover {
+    color: #7db2ff;
+}
+
 body {
     margin: 0;
     color: #e5e7eb;

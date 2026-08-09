@@ -7,7 +7,7 @@
 	name="viewport"
 	content="width=device-width, initial-scale=1.0"
     >
-    <title>jsf | My Website</title>
+    <title>jsf | TEST Website</title>
 
     <link
 	rel="stylesheet"
@@ -16,7 +16,14 @@
 </head>
 
 <body>
-    <header>
+    <nav class="site-nav">
+	<a href="#home">Home</a>
+	<a href="#projects">Projects</a>
+	<a href="#interaction">Interaction</a>
+	<a href="#canvas-demo">Canvas</a>
+    </nav>
+
+    <header id="home" class="hero">
 	<p class="label">TEST WEBSITE</p>
 	<h1>TEST</h1>
 
@@ -26,7 +33,7 @@
     </header>
 
     <main>
-	<section>
+	<section id="projects">
 	    <h2>TeSt</h2>
 
 	    <div class="test-grid">
@@ -38,7 +45,7 @@
 	    </div>
 	</section>
 	
-	<section>
+	<section id="interaction"> 
 	    <h2>Click</h2>
 
 	    <button id="test-button">
@@ -50,7 +57,7 @@
 	    </p>
 	</section>
 
-	<section>
+	<section id="canvas-demo">
 	    <h2>Canvas</h2>
 
 	    <canvas
