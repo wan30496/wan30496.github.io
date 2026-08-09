@@ -40,12 +40,29 @@ body {
 }
 
 header {
-    margin: 8px 0;
-    font-size: 48px;
+    width: min(1000px, 86%);
+    margin: 0 auto;
+    padding: 80px 0 40px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(48px, 8vw, 80px);
+    line-height: 1.1;
+}
+
+.hero > p:not(.label) {
+    max-width: 680px;
+    margin-top: 24px;
+    color: #9ca3af;
+    font-size: 18px;
 }
 
 .label {
     color: #7db2ff;
+    margin: 0 0 16px;
+    font-size: 14px;
+    letter-spacing: 0.18em;
 }
 
 main {
@@ -111,6 +128,6 @@ footer {
     }
     
     header {
-	padding: 60px 7%;
+	padding: 60px 0;
     }
 }
