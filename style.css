@@ -106,6 +106,24 @@ button:hover{
     background: #a5c9ff;
 }
 
+.canvas-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.canvas-controls input {
+    accent-color: #7db2ff;
+}
+
+#speed-value {
+    min-width: 2ch;
+    color: #7db2ff;
+}
+
+
 .button-row {
     display: flex;
     flex-wrap: wrap;

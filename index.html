@@ -81,6 +81,28 @@
 
 	<section id="canvas-demo">
 	    <h2>Canvas</h2>
+	    <div class="canvas-controls">
+		<button
+		    id="animation-toggle"
+		    type="button"
+		>
+		    Pause
+		</button>
+
+		<label for="animation-speed">
+		    Speed
+		</label>
+
+		<input
+		    id="animation-speed"
+		    type="range"
+		    min="1"
+		    max="10"
+		    value="3"
+		>
+
+		<span id="speed-value">3</span>
+	    </div>
 
 	    <canvas
 		id="test-canvas"

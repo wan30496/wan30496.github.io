@@ -14,6 +14,16 @@ const resetButton =
 const canvas =
     document.querySelector("#test-canvas");
 
+const animationToggle =
+    document.querySelector("#animation-toggle");
+
+const animationSpeed =
+    document.querySelector("#animation-speed");
+
+const speedValue =
+    document.querySelector("#speed-value");
+
+
 if (!testButton) {
     console.error("没有找到id为test-button的元素"
     );
@@ -34,6 +44,24 @@ if (!testResult) {
 
 if (!canvas) {
     console.error("没有找到id为test-canvas的元素"
+);
+    return;
+}
+
+if (!animationToggle) {
+     console.error("没有找到id为animation-toggle的元素"
+);
+    return;
+}
+
+if (!animationSpeed) {
+     console.error("没有找到id为animation-speed的元素"
+);
+    return;
+}
+
+if (!speedValue) {
+     console.error("没有找到id为speed-value的元素"
 );
     return;
 }
@@ -63,9 +91,34 @@ const context =
 
 let x = 40;
 let speed = 3;
+let isPaused = false;
 
 const radius = 20;
 const centerY = canvas.height / 2;
+
+animationToggle.addEventListener(
+    "click",
+    function(){
+	isPaused = !isPaused;
+	animationToggle.textContent =
+	    isPaused ? "Continue" : "Pause"
+    }
+);
+
+animationSpeed.addEventListener(
+    "input",
+    function(){
+	const direction =
+	    speed >=0 ? 1: -1;
+	    
+	const newSpeed =
+	    Number(animationSpeed.value);
+	
+	speed = direction * newSpeed;
+	speedValue.textContent = newSpeed;
+    }
+);
+
 
 function draw() {
     context.clearRect(
@@ -88,14 +141,16 @@ function draw() {
     context.fillStyle = "#7db2ff";
     context.fill();
 
-    x += speed;
-
-    if (
-	x + radius >= canvas.width
-	|| x - radius <= 0
+    if (!isPaused) {
+	x +=speed;
+	
+	if (
+	    x + radius >= canvas.width
+	    || x - radius <= 0
 	){
-	speed = -speed;
+	    speed = -speed;
 	}
+    }
     requestAnimationFrame(draw);
     }
 draw();
