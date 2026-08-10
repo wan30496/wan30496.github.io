@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Heat Equation Test | JSF</title>
+
+    <link
+        rel="stylesheet"
+        href="../style.css"
+    >
+</head>
+
+<body>
+    <nav class="site-nav">
+        <a href="../index.html">Home</a>
+    </nav>
+
+    <header class="hero">
+        <p class="label">
+            SCIENTIFIC COMPUTING TEST
+        </p>
+
+        <h1>1D Heat Equation</h1>
+
+        <p>
+            A numerical simulation of one-dimensional
+            heat diffusion.
+        </p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Temperature Evolution</h2>
+
+            <canvas
+                id="heat-canvas"
+                width="800"
+                height="320"
+            ></canvas>
+
+            <p>
+                The curve shows how temperature
+                changes with position and time.
+            </p>
+        </section>
+
+        <section>
+            <h2>Equation</h2>
+
+            <p>
+                <code>
+                    ∂u/∂t = α ∂²u/∂x²
+                </code>
+            </p>
+
+            <p>
+                Here, u is temperature and α is
+                the thermal diffusion coefficient.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>JSF Scientific Computing Test</p>
+    </footer>
+
+    <script src="./heat-equation.js"></script>
+</body>
+
+</html>
