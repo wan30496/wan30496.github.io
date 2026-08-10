@@ -140,13 +140,19 @@ button:hover{
     background: #475569;
 }
 
-#test-canvas {
+#test-canvas,
+#heat-canvas,
+#reaction-canvas  {
     display: block;
     width: 100%;
     height: auto;
     background: #151d31;
     border: 1px solid #304163;
     border-radius: 12px;
+}
+
+#reaction-canvas {
+    image-rendering: pixelated;
 }
 
 footer {
